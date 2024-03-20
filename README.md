@@ -7,7 +7,7 @@
 |이름|블로그|
 |:---|---:|
 |[홍성재](https://github.com/HHongSeongJae)|[블로그](https://dailyhongsj.tistory.com/)|
-|이선호|블로그|
+|[이선호](https://github.com/LSHO1224)|[블로그](https://lsho1224.github.io/)|
 
 ## 👉 사용할 언어
 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white">
