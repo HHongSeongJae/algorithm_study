@@ -13,20 +13,20 @@
 
 P = int(input())
 
+resultList = []
+
 for i in range(P):
     student = list(map(int,input().split()))
     count = 0
 
-    for j in range(1, len(student)): # 1개 길게 나옴
+    for j in range(1, len(student)-1): # 1개 길게 나옴
         #구현
         ## 자기보다 앞에 확인
-        for z in range(1, j):
-            if(student[z] > student[j]): #앞에 큰 사람 존재
-                temp = student[j]
-                student.remove(student[j])
-                student.insert(z, temp)
-                
-                count += abs(z-j)
-            else:
-                continue
-    print(student[0], count)
+        for z in range(j+1, len(student)):
+            if(student[j] > student[z]): #앞에 큰 사람 존재
+                student[j] , student[z] = student[z] , student[j]
+                count += 1
+    resultList.append([student[0], count])
+
+for i in resultList:
+    print(i[0],i[1])
