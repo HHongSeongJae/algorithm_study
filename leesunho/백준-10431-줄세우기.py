@@ -1,17 +1,18 @@
 P = int(input())
 
-resultList  = []
+resultList=[]
 
+for i in range(P):
+    student = list(map(int,input().split()))
+    count = 0
+    for j in range(1, len(student)-1):
+        for z in range(j+1, len(student)):
+            if(student[z] < student[j]): 
+                count+=1
+            else:
+                continue
+    resultList.append([student[0], count])
 
-for p in range(P):
-    result = 0
-    a = list(map(int,input().split()))
-    for i in range(1, len(a)-1):
-        for j in range(i+1, len(a)):
-            if(a[i]>a[j]):
-                a[i], a[j] = a[j], a[i]
-                result += 1
-    resultList.append([p+1,result])    
-    
 for i in resultList:
-    print(i[0], i[1])
+    print(i[0],i[1])
+    
