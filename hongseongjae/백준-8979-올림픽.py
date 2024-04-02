@@ -24,6 +24,10 @@ prize = [0 for i in range(4)]
 for i in range(N):
     prize[i] = list(map(int,input().split()))
 
+# prize = [list(map(int,input().split())) for _ in range(N)]
+
+# print(prize)
+
 prize.sort(key = lambda x: (x[1], x[2] , x[3]) , reverse=True)  # 메달의 수만 보고 정렬
 
 # 찾는 국가의 인덱스 => 순위
